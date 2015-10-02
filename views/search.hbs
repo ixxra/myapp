@@ -1,0 +1,20 @@
+<header class="container">
+  <h1>{{title}} ({{total}})</h1>
+  <hr>
+</header>
+
+<div class="container">
+  <row>
+    <div class="col-sm-4 text-uppercase">Title</div>
+    <div class="col-sm-4 text-uppercase">Artist</div>
+    <div class="col-sm-4 text-uppercase">Album</div>
+  </row>
+
+  {{#each results}}
+    <row>
+      <trackTitle>{{title}}</trackTitle>
+      <artist><a href="/artists/{{artist}}">{{artist}}</a></artist>
+      <album><a href="/albums/{{album}}">{{album}}</a></album>
+    </row>
+  {{/each}}
+</div>

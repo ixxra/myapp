@@ -3,12 +3,16 @@ var $ = require('jquery');
 
 var Track = React.createClass({
   render: function() {
-    return <div>
-      <div>{this.props.title}</div>
-      <div>{this.props.author}</div>
-      <div>{this.props.track}</div>
-      <div>{this.props.album}</div>
-      <div>{this.props.year}</div>
+    return <div className="track">
+      <div className="row">
+        <div className="title">{this.props.title}</div>
+        <div className="artist">{this.props.artist}</div>
+      </div>
+      <div className="row">
+        <div className="tracknr">{this.props.track}</div>
+        <div className="album">{this.props.album}</div>
+        <div className="year">{this.props.year}</div>
+      </div>
     </div>;
   }
 });
@@ -22,7 +26,9 @@ var SearchForm = React.createClass({
 
   render: function(){
     return <form onSubmit={this.handleSubmit}>
-      <input type="search" placeholder="Search" ref="query" />
+      <div className="form-group">
+        <input type="search" className="form-control" placeholder="Search" ref="query" />
+      </div>
     </form>;
   }
 });
@@ -43,7 +49,6 @@ var SearchBox = React.createClass({
 
   render: function() {
     return <div>
-    <h1>Library Search</h1>
     <SearchForm onSubmit={this.search} />
     </div>;
   }
