@@ -10,6 +10,8 @@ var users = require('./routes/users');
 var metadata = require('./routes/metadata');
 var artists = require('./routes/artists');
 var search = require('./routes/search');
+var vlc = require('./routes/vlc');
+var vlc_api = require('./routes/api/vlc');
 
 var app = express();
 
@@ -31,7 +33,8 @@ app.use('/users', users);
 app.use('/artists', artists);
 app.use('/search', search);
 app.use('/api/metadata', metadata);
-
+app.use('/api/vlc', vlc_api);
+app.use('/vlc', vlc);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

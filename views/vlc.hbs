@@ -1,0 +1,41 @@
+<header class="container">
+  <h1>{{title}}</h1>
+</header>
+<div class="container">
+  <form action="/api/vlc/play" method="post" class="navbar-form navbar-left">
+    <div class="form-group">
+      <button type="submit" class="form-control">Play</button>
+    </div>
+  </form>
+  <form action="/api/vlc/pause" method="post" class="navbar-form navbar-left">
+    <div class="form-group">
+      <button type="submit" class="form-control">Pause</button>
+    </div>
+  </form>
+  <form action="/api/vlc/stop" method="post" class="navbar-form navbar-left">
+    <div class="form-group">
+      <button type="submit" class="form-control">Stop</button>
+    </div>
+  </form>
+  <form action="/api/vlc/next" method="post" class="navbar-form navbar-left">
+    <div class="form-group">
+      <button type="submit" class="form-control">Next</button>
+    </div>
+  </form>
+  <form action="/api/vlc/prev" method="post" class="navbar-form navbar-left">
+    <div class="form-group">
+      <button type="submit"  class="form-control">Prev</button>
+    </div>
+  </form>
+</div>
+
+<div class="container">
+  <head><h2>Playlist</h2></head>
+    {{#each playlist}}
+      <row>
+        <trackTitle>{{this.title}}</trackTitle>
+        <artist>{{this.artist}}</artist>
+        <album>{{this.album}}</album>
+      </row>
+    {{/each}}
+</div>

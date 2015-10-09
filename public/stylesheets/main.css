@@ -6532,6 +6532,102 @@ row:after {
     display: none !important;
   }
 }
+button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+button:focus,
+button:active:focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+button:hover,
+button:focus,
+button.focus {
+  color: #333;
+  text-decoration: none;
+}
+button:active,
+button.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+button.disabled,
+button[disabled],
+fieldset[disabled] button {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+button:hover,
+button:focus,
+button.focus,
+button:active,
+button.active,
+.open > .dropdown-togglebutton {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+button:active,
+button.active,
+.open > .dropdown-togglebutton {
+  background-image: none;
+}
+button.disabled,
+button[disabled],
+fieldset[disabled] button,
+button.disabled:hover,
+button[disabled]:hover,
+fieldset[disabled] button:hover,
+button.disabled:focus,
+button[disabled]:focus,
+fieldset[disabled] button:focus,
+button.disabled.focus,
+button[disabled].focus,
+fieldset[disabled] button.focus,
+button.disabled:active,
+button[disabled]:active,
+fieldset[disabled] button:active,
+button.disabled.active,
+button[disabled].active,
+fieldset[disabled] button.active {
+  background-color: #fff;
+  border-color: #ccc;
+}
+button .badge {
+  color: #fff;
+  background-color: #333;
+}
 row {
   margin-left: -15px;
   margin-right: -15px;
